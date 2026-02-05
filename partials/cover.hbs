@@ -1,0 +1,33 @@
+<div class="cover gh-outer">
+    <div class="cover-content gh-inner">
+        {{#if @site.icon}}
+            <div class="cover-icon">
+                <img class="cover-icon-image" src="{{@site.icon}}" alt="{{@site.title}}">
+            </div>
+        {{/if}}
+
+        <div class="cover-description">
+            <span class="lang-en">Montréal's hub for AI safety research, policy, and community</span>
+            <span class="lang-fr">Le carrefour montréalais pour la recherche, les politiques et la communauté en sécurité de l'IA</span>
+        </div>
+
+        {{#if @site.members_enabled}}
+            {{#unless @member}}
+            <p class="cover-signup-hint">
+                <span class="lang-en">Monthly: events, policy updates, research & opportunities</span>
+                <span class="lang-fr">Mensuel : événements, politiques, recherche et opportunités</span>
+            </p>
+            <div class="cover-cta">
+                <button class="button members-subscribe" data-portal="signup">
+                    <span class="lang-en">Subscribe</span>
+                    <span class="lang-fr">S'abonner</span>
+                </button>
+                <button class="button button-secondary members-login" data-portal="signin">
+                    <span class="lang-en">Login</span>
+                    <span class="lang-fr">Connexion</span>
+                </button>
+            </div>
+            {{/unless}}
+        {{/if}}
+    </div>
+</div>
