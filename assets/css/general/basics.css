@@ -1,13 +1,13 @@
 :root {
     --brand-color: var(--ghost-accent-color, #ff572f);
-    --primary-text-color: #333;
-    --secondary-text-color: #999;
+    --primary-text-color: #18181b;
+    --secondary-text-color: #71717a;
     --white-color: #fff;
-    --lighter-gray-color: #f6f6f6;
-    --light-gray-color: #e6e6e6;
-    --mid-gray-color: #ccc;
-    --dark-gray-color: #444;
-    --darker-gray-color: #1a1a1a;
+    --lighter-gray-color: #fafafa;
+    --light-gray-color: #e4e4e7;
+    --mid-gray-color: #d4d4d8;
+    --dark-gray-color: #52525b;
+    --darker-gray-color: #18181b;
     --black-color: #000;
     --green-color: #28a745;
     --orange-color: #ffc107;
@@ -29,6 +29,17 @@
     --navbar-height: 80px;
     --content-font-size: 1.7rem;
     --header-spacing: 60px;
+    --color-border: #e4e4e7;
+    --color-border-subtle: #f4f4f5;
+    --color-bg-surface: #fafafa;
+    --color-secondary-text: #71717a;
+    --color-white: #fff;
+    --color-lighter-gray: #fafafa;
+    --color-light-gray: #e4e4e7;
+    --color-light-color: #e4e4e7;
+    --color-mid-gray: #d4d4d8;
+    --color-dark-gray: #52525b;
+    --color-darker-gray: #18181b;
 }
 
 @media (max-width: 767px) {
@@ -40,6 +51,8 @@
 body {
     color: var(--primary-text-color);
     background-color: var(--white-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -54,4 +67,18 @@ h5,
 h6 {
     font-weight: 800;
     color: var(--darker-gray-color);
+    letter-spacing: -0.025em;
+}
+
+.gh-foot {
+    border-top: 1px solid var(--color-border);
+}
+
+.gh-foot-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.gh-foot a:hover {
+    color: var(--brand-color);
 }

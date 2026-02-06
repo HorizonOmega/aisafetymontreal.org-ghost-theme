@@ -2,23 +2,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
-    padding: 0 15px;
-    font-size: 11px;
-    font-weight: 800;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--brand-color);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
     cursor: pointer;
     background-color: var(--white-color);
     border: 1px solid var(--light-gray-color);
-    border-radius: 3px;
+    border-radius: 10px;
     outline: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .button:hover {
     border-color: var(--mid-gray-color);
     opacity: 1;
+    transform: translateY(-1px);
 }
 
 .button .icon-loading {
@@ -64,4 +64,14 @@
     background-color: transparent;
     border: 0;
     outline: none;
+}
+
+.gh-head-actions .button {
+    color: var(--white-color);
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.gh-head-actions .button:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }

@@ -6,15 +6,18 @@
 
 .site-content {
     flex-grow: 1;
-    padding: 6rem 0;
+    padding: clamp(3rem, 6vw, 6rem) 0;
 }
 
 .page-template .site-content {
     padding-block: 0;
 }
 
-@media (max-width: 767px) {
-    .site-content {
-        padding: 3rem 0;
-    }
+.home-template .site-content {
+    padding-top: 0;
+    padding-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+.home-template .site-content {
+    --container-width: 800px;
 }

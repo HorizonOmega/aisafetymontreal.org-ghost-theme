@@ -1,41 +1,64 @@
 .cover {
-    margin-top: 48px;
+    padding: clamp(3rem, 4vw, 4rem) 0 clamp(2rem, 3vw, 3rem);
 }
 
 .cover-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 520px;
+    max-width: 640px;
     margin: 0 auto;
     text-align: center;
 }
 
 .cover-icon {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .cover-icon-image {
-    width: 120px;
+    width: 80px;
 }
 
 .cover-description {
-    font-size: 1.7rem;
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.cover-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-secondary-text);
+    font-weight: 500;
+    margin-top: 0.8rem;
+    letter-spacing: 0.02em;
 }
 
 .cover-signup-hint {
-    font-size: 0.9375rem;
-    color: var(--color-secondary-text);
-    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--secondary-text-color);
+    margin-top: 1.6rem;
     font-weight: 500;
 }
 
 .cover-cta {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .cover-cta .button {
-    margin: 0 0.5rem;
+    margin: 0 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .cover {
+        padding: clamp(2rem, 3.5vw, 3rem) 0 clamp(1.6rem, 2.5vw, 2rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .cover-content {
+        max-width: 100%;
+    }
 }

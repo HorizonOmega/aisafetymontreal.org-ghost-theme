@@ -9,6 +9,7 @@
     "license": "MIT",
     "author": {
         "name": "AI Safety Montréal",
+        "email": "hello@aisafetymontreal.org",
         "url": "https://aisafetymontreal.org"
     },
     "keywords": [
@@ -92,6 +93,16 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "events_calendar_url": {
+                "type": "text",
+                "default": "",
+                "group": "homepage"
+            },
+            "directory_data_url": {
+                "type": "text",
+                "default": "",
+                "group": "homepage"
             }
         }
     },

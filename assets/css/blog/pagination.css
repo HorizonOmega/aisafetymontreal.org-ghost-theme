@@ -3,3 +3,7 @@
     justify-content: center;
     margin-top: 48px;
 }
+
+.home-template .load-more {
+    display: none;
+}

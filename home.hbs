@@ -2,12 +2,102 @@
 
 <main class="site-main">
 
-    <div class="post-feed gh-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
-    </div>
+    {{!-- Newsletter posts section --}}
+    <section class="homepage-section gh-outer" id="newsletter">
+        <div class="gh-inner">
+            <h2 class="section-heading">
+                <span class="lang-en">Newsletter</span>
+                <span class="lang-fr">Infolettre</span>
+            </h2>
+        </div>
+        <div class="post-feed gh-feed gh-canvas">
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+        {{#if @site.members_enabled}}
+            {{#unless @member}}
+            <div class="newsletter-subscribe">
+                <button class="button newsletter-subscribe-btn" data-portal="signup">
+                    <span class="lang-en">Subscribe</span>
+                    <span class="lang-fr">S'abonner</span>
+                </button>
+            </div>
+            {{/unless}}
+        {{/if}}
+    </section>
 
-    {{pagination}}
+    {{!-- Events section --}}
+    {{#if @custom.events_calendar_url}}
+    <section class="homepage-section gh-outer" id="events">
+        <div class="gh-inner">
+            <h2 class="section-heading">
+                <span class="lang-en">Events</span>
+                <span class="lang-fr">Événements</span>
+            </h2>
+            <div class="calendar-embed">
+                <iframe src="{{@custom.events_calendar_url}}"
+                        width="100%"
+                        height="420"
+                        allowfullscreen
+                        aria-hidden="false"
+                        tabindex="0"></iframe>
+            </div>
+            <div class="events-see-all">
+                <a href="https://lu.ma/montreal-ai-safety-ethics-governance?k=c" target="_blank" rel="noopener noreferrer">
+                    <span class="lang-en">See all events &rarr;</span>
+                    <span class="lang-fr">Voir tous les événements &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    {{!-- Organizations section --}}
+    <section class="homepage-section gh-outer" id="directory">
+        <div class="gh-inner">
+            <h2 class="section-heading">
+                <span class="lang-en">Organizations</span>
+                <span class="lang-fr">Organisations</span>
+            </h2>
+            <div class="directory-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="lang-en">All</span>
+                    <span class="lang-fr">Tout</span>
+                </button>
+                <button class="filter-btn" data-filter="research">
+                    <span class="lang-en">Research</span>
+                    <span class="lang-fr">Recherche</span>
+                </button>
+                <button class="filter-btn" data-filter="governance-policy">
+                    <span class="lang-en">Policy</span>
+                    <span class="lang-fr">Politique</span>
+                </button>
+                <button class="filter-btn" data-filter="education-training">
+                    <span class="lang-en">Education</span>
+                    <span class="lang-fr">Éducation</span>
+                </button>
+                <button class="filter-btn" data-filter="network-events">
+                    <span class="lang-en">Events</span>
+                    <span class="lang-fr">Événements</span>
+                </button>
+                <button class="filter-btn" data-filter="advocacy">
+                    <span class="lang-en">Advocacy</span>
+                    <span class="lang-fr">Plaidoyer</span>
+                </button>
+                <button class="filter-btn" data-filter="standards-assurance">
+                    <span class="lang-en">Standards</span>
+                    <span class="lang-fr">Normes</span>
+                </button>
+                <button class="filter-btn" data-filter="startup">
+                    <span class="lang-en">Startup</span>
+                    <span class="lang-fr">Startup</span>
+                </button>
+                <span class="directory-count" id="directory-count"></span>
+            </div>
+            <ul id="directory-list" class="directory-list" {{#if @custom.directory_data_url}}data-source="{{@custom.directory_data_url}}"{{/if}}></ul>
+        </div>
+    </section>
 
 </main>

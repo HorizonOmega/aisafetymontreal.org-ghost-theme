@@ -2,19 +2,37 @@
 
 <section class="single-cta">
     {{#has visibility="paid"}}
-        <h2 class="single-cta-title">This post is for paying subscribers only</h2>
+        <h2 class="single-cta-title">
+            <span class="lang-en">This post is for paying subscribers only</span>
+            <span class="lang-fr">Cet article est r&eacute;serv&eacute; aux abonn&eacute;s payants</span>
+        </h2>
     {{/has}}
     {{#has visibility="members"}}
-        <h2 class="single-cta-title">This post is for subscribers only</h2>
+        <h2 class="single-cta-title">
+            <span class="lang-en">This post is for subscribers only</span>
+            <span class="lang-fr">Cet article est r&eacute;serv&eacute; aux abonn&eacute;s</span>
+        </h2>
     {{/has}}
     {{#has visibility="filter"}}
-        <h2 class="single-cta-title">This post is for subscribers on the {{tiers}} only</h2>
+        <h2 class="single-cta-title">
+            <span class="lang-en">This post is for subscribers on the {{tiers}} only</span>
+            <span class="lang-fr">Cet article est r&eacute;serv&eacute; aux abonn&eacute;s du niveau {{tiers}}</span>
+        </h2>
     {{/has}}
     {{#if @member}}
-        <button class="button single-cta-button" data-portal="account/plans">Upgrade now</button>
+        <button class="button single-cta-button" data-portal="account/plans">
+            <span class="lang-en">Upgrade now</span>
+            <span class="lang-fr">Mettre &agrave; niveau</span>
+        </button>
     {{else}}
-        <button class="button single-cta-button" data-portal="signup">Subscribe now</button>
+        <button class="button single-cta-button" data-portal="signup">
+            <span class="lang-en">Subscribe now</span>
+            <span class="lang-fr">S'abonner</span>
+        </button>
         <br>
-        <button class="button-text single-cta-footer" data-portal="signin">Already have an account? Sign in</button>
+        <button class="button-text single-cta-footer" data-portal="signin">
+            <span class="lang-en">Already have an account? Sign in</span>
+            <span class="lang-fr">D&eacute;j&agrave; un compte ? Se connecter</span>
+        </button>
     {{/if}}
 </section>

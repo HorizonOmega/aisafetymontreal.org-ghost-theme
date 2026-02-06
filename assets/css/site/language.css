@@ -3,7 +3,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0;
-    padding: 0.1875rem;
+    padding: 0.3rem;
     border-radius: 14px;
     border: 1px solid var(--color-border);
     background: var(--color-lighter-gray);
@@ -13,11 +13,11 @@
 .lang-btn {
     background: transparent;
     border: none;
-    padding: 0.5rem 0.875rem;
-    border-radius: calc(14px - 0.1875rem);
-    font-size: 0.8125rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: calc(14px - 0.3rem);
+    font-size: 1.3rem;
     font-weight: 600;
-    color: var(--color-secondary-text);
+    color: var(--secondary-text-color);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -26,7 +26,7 @@
 }
 
 .lang-btn:hover:not([aria-pressed="true"]) {
-    color: var(--color-darker-gray);
+    color: var(--darker-gray-color);
 }
 
 .lang-btn[aria-pressed="false"]:hover {
@@ -38,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .auto .lang-btn[aria-pressed="false"]:hover {
+    html:not(.theme-light) .lang-btn[aria-pressed="false"]:hover {
         background: rgba(255, 255, 255, 0.05);
     }
 }
@@ -69,11 +69,11 @@ body.french .lang-en {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .lang-toggle {
-        padding: 0.1875rem;
+        padding: 0.3rem;
     }
 
     .lang-btn {
-        padding: 0.3125rem 0.625rem;
-        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
     }
 }
